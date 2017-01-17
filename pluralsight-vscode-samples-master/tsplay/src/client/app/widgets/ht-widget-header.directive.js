@@ -23,9 +23,9 @@ var app;
             HtWidgetHeader.instance = function () {
                 return new HtWidgetHeader();
             };
-            HtWidgetHeader.$inject = [''];
             return HtWidgetHeader;
-        })();
+        }());
+        HtWidgetHeader.$inject = [''];
         angular
             .module('app.widgets')
             .directive('htWidgetHeader', HtWidgetHeader.instance);

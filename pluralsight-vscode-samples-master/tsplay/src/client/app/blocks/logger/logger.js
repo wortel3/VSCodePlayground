@@ -12,7 +12,7 @@ var blocks;
             Logger.prototype.log = function () {
                 var args = [];
                 for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i - 0] = arguments[_i];
+                    args[_i] = arguments[_i];
                 }
                 this.$log.log(args);
             };
@@ -32,9 +32,9 @@ var blocks;
                 this.toastr.warning(message, title);
                 this.$log.warn('Warning: ' + message, '\nSummary:', title, '\nDetails:', data);
             };
-            Logger.$inject = ['$log', 'toastr'];
             return Logger;
-        })();
+        }());
+        Logger.$inject = ['$log', 'toastr'];
         logger.Logger = Logger;
         angular
             .module('blocks.logger')

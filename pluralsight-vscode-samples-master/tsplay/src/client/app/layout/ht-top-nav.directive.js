@@ -15,14 +15,14 @@ var applayout;
         HtTopNav.instance = function () {
             return new HtTopNav();
         };
-        HtTopNav.$inject = [''];
         return HtTopNav;
-    })();
+    }());
+    HtTopNav.$inject = [''];
     var TopNavController = (function () {
         function TopNavController() {
         }
         return TopNavController;
-    })();
+    }());
     angular
         .module('app.layout')
         .directive('htTopNav', HtTopNav.instance);

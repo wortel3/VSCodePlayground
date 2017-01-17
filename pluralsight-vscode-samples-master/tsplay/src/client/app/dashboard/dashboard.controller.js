@@ -34,9 +34,13 @@ var app;
                     return _this.people;
                 });
             };
-            DashboardController.$inject = ['$q', 'dataservice', 'logger'];
+            DashboardController.prototype.myFunc = function () {
+                var x = "Hello World";
+                var y = x.charAt(1);
+            };
             return DashboardController;
-        })();
+        }());
+        DashboardController.$inject = ['$q', 'dataservice', 'logger'];
         dashboard.DashboardController = DashboardController;
         angular
             .module('app.dashboard')

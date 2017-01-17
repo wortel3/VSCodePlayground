@@ -22,9 +22,9 @@ var app;
                     .filter(function (state) { return state.settings && state.settings.nav; })
                     .sort(function (state1, state2) { return state1.settings.nav - state2.settings.nav; });
             };
-            SidebarController.$inject = ['$state'];
             return SidebarController;
-        })();
+        }());
+        SidebarController.$inject = ['$state'];
         layout.SidebarController = SidebarController;
         angular
             .module('app.layout')

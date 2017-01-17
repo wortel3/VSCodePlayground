@@ -9,9 +9,9 @@ var app;
                 this.title = 'Admin';
                 this.logger.info('Activated Admin View');
             }
-            AdminController.$inject = ['logger'];
             return AdminController;
-        })();
+        }());
+        AdminController.$inject = ['logger'];
         admin.AdminController = AdminController;
         angular
             .module('app.admin')

@@ -25,9 +25,9 @@ var app;
                 //Force a 1 second delay so we can see the splash.
                 this.$timeout(function () { _this.$rootScope.showSplash = false; }, 1000);
             };
-            ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger'];
             return ShellController;
-        })();
+        }());
+        ShellController.$inject = ['$rootScope', '$timeout', 'config', 'logger'];
         layout.ShellController = ShellController;
         angular
             .module('app.layout')

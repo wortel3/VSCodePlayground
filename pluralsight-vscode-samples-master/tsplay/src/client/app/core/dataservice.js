@@ -24,9 +24,9 @@ var app;
                     return _this.$q.reject(msg);
                 };
             }
-            DataService.$inject = ['$http', '$q', 'exception', 'logger'];
             return DataService;
-        })();
+        }());
+        DataService.$inject = ['$http', '$q', 'exception', 'logger'];
         core.DataService = DataService;
         angular
             .module('app.core')

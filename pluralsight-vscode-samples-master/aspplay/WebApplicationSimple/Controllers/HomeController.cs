@@ -6,8 +6,15 @@ using Microsoft.AspNet.Mvc;
 
 namespace WebApplicationSimple.Controllers
 {
-    public class HomeController : Controller
+    public class Customer{
+        public string FullName { get; set; }
+    }
+   public class HomeController : Controller
     {
+        public void testFunc(){
+            var c = new Customer(); 
+            var cf = c.FullName; 
+        }
         public IActionResult Index()
         {
             return View();
@@ -19,6 +26,7 @@ namespace WebApplicationSimple.Controllers
 
             return View();
         }
+        
 
         public IActionResult Contact()
         {

@@ -42,6 +42,10 @@ namespace app.dashboard {
                 return this.people;
             });
         }
+        myFunc() {
+            let x = "Hello World";
+            let y = x.charAt(1);
+        }
     }
 
     angular

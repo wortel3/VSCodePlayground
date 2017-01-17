@@ -39,9 +39,9 @@ var app;
                     }
                 }
             };
-            HtSidebar.$inject = [''];
             return HtSidebar;
-        })();
+        }());
+        HtSidebar.$inject = [''];
         angular
             .module('app.layout')
             .directive('htSidebar', HtSidebar.instance);

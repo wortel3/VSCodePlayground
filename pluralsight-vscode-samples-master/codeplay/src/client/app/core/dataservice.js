@@ -3,14 +3,15 @@
 
     angular
         .module('app.core')
+        .controller()
         .factory('dataservice', dataservice);
 
     dataservice.$inject = ['$http', '$q', 'exception', 'logger'];
     /* @ngInject */
     function dataservice($http, $q, exception, logger) {
         var service = {
-            getMessageCount: getMessageCount,
-            getPeople: getPeople
+            getPeople: getPeople, 
+            getMessageCount: getMessageCount
         };
 
         return service;
